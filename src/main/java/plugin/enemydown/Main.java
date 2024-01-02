@@ -11,7 +11,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        EnemyDownCommand enemyDownCommand = new EnemyDownCommand();
+        EnemyDownCommand enemyDownCommand = new EnemyDownCommand(this);
         Bukkit.getPluginManager().registerEvents(enemyDownCommand, this);
         getCommand("enemyDown").setExecutor(enemyDownCommand);
 
