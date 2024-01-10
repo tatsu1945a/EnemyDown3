@@ -12,6 +12,11 @@ import plugin.enemydown.Main;
 
 public class EnemySpawnCommand extends BaseCommand implements Listener {
 
+  private Main main;
+  public EnemySpawnCommand(Main main) {
+    this.main = main;
+  }
+
   @Override
   public boolean onExecutePlayerCommand(Player player) {
     player.getWorld().spawnEntity(getEnemySpawnLocation(player), getEnemy());
